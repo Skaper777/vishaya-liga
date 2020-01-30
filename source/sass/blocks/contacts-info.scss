@@ -1,0 +1,52 @@
+.contacts-info {
+  &__item:not(:last-of-type) {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+    &:hover {
+      svg {
+        fill: white;
+      }
+    }
+
+    svg {
+      height: auto;
+      width: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      fill: red;
+      transition: 0.2s;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  &__soc {
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin-right: 20px;
+    }
+
+    svg {
+      width: 30px;
+      height: auto;
+      fill: white;
+      transition: .2s;
+
+      &:hover {
+        fill: red;
+      }
+    }
+  }
+}

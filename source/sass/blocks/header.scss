@@ -1,0 +1,46 @@
+.page-header {
+  background: $dark;
+  padding: 15px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  &__nav {
+    max-width: 500px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    li {
+      position: relative;
+      padding-right: 20px;
+      margin-right: 15px;
+
+      &:not(:last-of-type)::after {
+        position: absolute;
+        content: "";
+        top: 8px;
+        right: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: red;
+      }
+
+      a {
+        color: white;
+        font-size: 18px;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}

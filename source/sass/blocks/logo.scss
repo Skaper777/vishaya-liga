@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: white;
+    font-size: 34px;
+    margin-bottom: 6px;
+    border-bottom: 2px solid red;
+  }
+
+  span {
+    color: white;
+  }
+}

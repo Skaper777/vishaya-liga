@@ -301,6 +301,18 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: "Circe-Bold";
+  src: url("../fonts/Circe-Bold.woff"), url("../fonts/Circe-Bold.ttf");
+  font-style: normal;
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Circe-Regular";
+  src: url("../fonts/Circe-Regular.woff"), url("../fonts/Circe-Regular.ttf");
+  font-style: normal;
+  font-weight: 500; }
+
 html {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
@@ -315,6 +327,27 @@ ul {
   padding: 0;
   margin: 0; }
 
+h2 {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  padding: 40px;
+  width: 500px;
+  margin: 0 auto; }
+  h2::before, h2::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 70px;
+    height: 1px;
+    background: black; }
+  h2::before {
+    left: 0; }
+  h2::after {
+    right: 0; }
+  h2 span {
+    color: #4682B4; }
+
 ul {
   list-style: none; }
 
@@ -323,17 +356,8 @@ a {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 
-@font-face {
-  font-family: "Circe-Bold";
-  src: url("../fonts/Circe-Bold.woff"), url("../fonts/Circe-Bold.ttf");
-  font-style: normal;
-  font-weight: 700; }
-
-@font-face {
-  font-family: "Circe-Regular";
-  src: url("../fonts/Circe-Regular.woff"), url("../fonts/Circe-Regular.ttf");
-  font-style: normal;
-  font-weight: 500; }
+section:not(:first-of-type) {
+  margin-bottom: 40px; }
 
 .container {
   max-width: 1140px;
@@ -376,7 +400,7 @@ a {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background: red; }
+        background: #4682B4; }
       .page-header__nav li a {
         color: white;
         font-size: 18px; }
@@ -395,7 +419,7 @@ a {
     color: white;
     font-size: 34px;
     margin-bottom: 6px;
-    border-bottom: 2px solid red; }
+    border-bottom: 2px solid #4682B4; }
   .logo span {
     color: white; }
 
@@ -411,7 +435,7 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    fill: red;
+    fill: #4682B4;
     -webkit-transition: 0.2s;
     transition: 0.2s; }
   .contacts-info__item:not(:last-of-type) a {
@@ -434,7 +458,7 @@ a {
   -webkit-transition: .2s;
   transition: .2s; }
   .contacts-info__soc svg:hover {
-    fill: red; }
+    fill: #4682B4; }
 
 .main-window {
   height: 88vh; }
@@ -492,7 +516,77 @@ a {
         .main-window__slider li p::after {
           right: 0; }
         .main-window__slider li p span {
-          color: red; }
+          color: #4682B4; }
+
+.services ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center; }
+
+.services li {
+  padding: 10px; }
+  .services li svg {
+    fill: #2B2A27;
+    width: 80px;
+    height: auto; }
+  .services li h3 {
+    margin: 12px 0;
+    text-transform: uppercase;
+    font-size: 16px; }
+  .services li p {
+    color: #6a6a6a;
+    line-height: 22px; }
+
+.feedbacks {
+  background: #f2f2f2; }
+  .feedbacks .feedbacks-slider ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 40px;
+    padding-bottom: 40px; }
+  .feedbacks .feedbacks-slider li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px;
+    width: 25%;
+    color: #6a6a6a;
+    font-size: 14px;
+    line-height: 24px; }
+  .feedbacks .feedbacks-slider img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px; }
+  .feedbacks .feedbacks-slider__text {
+    margin-bottom: 20px; }
+  .feedbacks .feedbacks-slider__user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .feedbacks .feedbacks-slider__user-name {
+    color: #2B2A27;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0; }
+  .feedbacks .feedbacks-slider__user-prof {
+    font-size: 12px;
+    line-height: 18px; }
 
 /**
  * Swiper 4.4.6

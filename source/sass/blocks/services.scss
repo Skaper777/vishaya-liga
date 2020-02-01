@@ -1,0 +1,28 @@
+.services {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  li {
+    padding: 10px;
+
+    svg {
+      fill: $dark;
+      width: 80px;
+      height: auto;
+    }
+
+    h3 {
+      margin: 12px 0;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    p {
+      color: $text-color;
+      line-height: 22px;
+    }
+  }
+}

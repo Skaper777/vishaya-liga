@@ -16,7 +16,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      fill: red;
+      fill: $blue;
       transition: 0.2s;
     }
 
@@ -45,7 +45,7 @@
       transition: .2s;
 
       &:hover {
-        fill: red;
+        fill: $blue;
       }
     }
   }

@@ -1,0 +1,46 @@
+.lawyers {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 250px;
+    height: 350px;
+    background: url('../img/lawyer-def.png') no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+
+    &:hover {
+      p {
+        background: $blue;
+      }
+    }
+
+    p {
+      background: $dark;
+      color: white;
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.2s;
+      border-bottom: 4px solid $blue;
+    }
+
+    span {
+      display: block;
+      text-transform: none;
+      font-weight: normal;
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: #6a6a6a;
+  }
+}

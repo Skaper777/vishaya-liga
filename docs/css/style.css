@@ -407,6 +407,34 @@ section:not(:first-of-type) {
         .page-header__nav li a:hover {
           border-bottom: 1px solid white; }
 
+.page-footer {
+  background: #2B2A27;
+  padding: 15px 0;
+  border-top: 4px solid #4682B4; }
+  .page-footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .page-footer__adress p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+    line-height: 24px; }
+  .page-footer h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: white;
+    font-size: 20px; }
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,6 +615,52 @@ section:not(:first-of-type) {
   .feedbacks .feedbacks-slider__user-prof {
     font-size: 12px;
     line-height: 18px; }
+
+.lawyers ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px; }
+
+.lawyers li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 250px;
+  height: 350px;
+  background: url("../img/lawyer-def.png") no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%; }
+  .lawyers li:hover p {
+    background: #4682B4; }
+  .lawyers li p {
+    background: #2B2A27;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-bottom: 4px solid #4682B4; }
+  .lawyers li span {
+    display: block;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 14px; }
+
+.lawyers__text {
+  text-align: center;
+  color: #6a6a6a; }
 
 /**
  * Swiper 4.4.6

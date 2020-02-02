@@ -1,0 +1,27 @@
+.page-footer {
+  background: $dark;
+  padding: 15px 0;
+  border-top: 4px solid $blue;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__adress {
+    p {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      line-height: 24px;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: white;
+    font-size: 20px;
+  }
+}

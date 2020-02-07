@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @media(max-width: $desktop) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 
   li {
@@ -10,10 +15,16 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 250px;
-    height: 350px;
+    padding-top: 25%;
     background: url('../img/lawyer-def.png') no-repeat;
     background-size: 100%;
-    background-position: 50% 50%;
+    background-position: 50% 40%;
+
+    @media(max-width: $desktop) {
+      background-size: 80%;
+      width: 48%;
+      padding-top: 35%;
+    }
 
     &:hover {
       p {

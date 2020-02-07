@@ -1,4 +1,12 @@
 .contacts-info {
+  @media(max-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 25px;
+  }
+
   &__item:not(:last-of-type) {
     position: relative;
     margin-bottom: 10px;
@@ -47,6 +55,12 @@
       &:hover {
         fill: $blue;
       }
+    }
+  }
+
+  h4 {
+    @media(max-width: $desktop) {
+      display: none;
     }
   }
 }

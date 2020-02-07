@@ -334,6 +334,11 @@ h2 {
   padding: 40px;
   width: 500px;
   margin: 0 auto; }
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 24px;
+      width: 400px;
+      padding: 30px; } }
   h2::before, h2::after {
     position: absolute;
     content: '';
@@ -341,6 +346,9 @@ h2 {
     width: 70px;
     height: 1px;
     background: black; }
+    @media (max-width: 1024px) {
+      h2::before, h2::after {
+        width: 40px; } }
   h2::before {
     left: 0; }
   h2::after {
@@ -357,7 +365,7 @@ a {
   transition: 0.2s; }
 
 section:not(:first-of-type) {
-  margin-bottom: 40px; }
+  padding-bottom: 40px; }
 
 .container {
   max-width: 1140px;
@@ -377,6 +385,10 @@ section:not(:first-of-type) {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 1024px) {
+      .page-header__container {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
   .page-header__nav {
     max-width: 500px; }
     .page-header__nav ul {
@@ -411,6 +423,9 @@ section:not(:first-of-type) {
   background: #2B2A27;
   padding: 15px 0;
   border-top: 4px solid #4682B4; }
+  @media (max-width: 1024px) {
+    .page-footer__logo {
+      margin-bottom: 20px; } }
   .page-footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,6 +433,10 @@ section:not(:first-of-type) {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media (max-width: 1024px) {
+      .page-footer__container {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
   .page-footer__adress p {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -434,6 +453,9 @@ section:not(:first-of-type) {
     text-decoration: underline;
     color: white;
     font-size: 20px; }
+    @media (max-width: 1024px) {
+      .page-footer h4 {
+        margin-bottom: 10px; } }
 
 .logo {
   display: -webkit-box;
@@ -450,6 +472,20 @@ section:not(:first-of-type) {
     border-bottom: 2px solid #4682B4; }
   .logo span {
     color: white; }
+
+@media (max-width: 1024px) {
+  .contacts-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 25px; } }
 
 .contacts-info__item:not(:last-of-type) {
   position: relative;
@@ -487,6 +523,10 @@ section:not(:first-of-type) {
   transition: .2s; }
   .contacts-info__soc svg:hover {
     fill: #4682B4; }
+
+@media (max-width: 1024px) {
+  .contacts-info h4 {
+    display: none; } }
 
 .main-window {
   height: 88vh; }
@@ -532,6 +572,13 @@ section:not(:first-of-type) {
         left: calc(50% - 500px);
         padding: 0 100px;
         width: 800px; }
+        @media (max-width: 1024px) {
+          .main-window__slider li p {
+            width: 500px;
+            font-size: 30px;
+            line-height: 50px;
+            padding: 0 80px;
+            left: calc(50% - 330px); } }
         .main-window__slider li p::before, .main-window__slider li p::after {
           position: absolute;
           content: '';
@@ -554,13 +601,24 @@ section:not(:first-of-type) {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center; }
+  @media (max-width: 1024px) {
+    .services ul {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 
 .services li {
   padding: 10px; }
+  @media (max-width: 1024px) {
+    .services li {
+      -ms-flex-preferred-size: 45%;
+          flex-basis: 45%; } }
   .services li svg {
     fill: #2B2A27;
     width: 80px;
     height: auto; }
+    @media (max-width: 1024px) {
+      .services li svg {
+        width: 60px; } }
   .services li h3 {
     margin: 12px 0;
     text-transform: uppercase;
@@ -624,6 +682,13 @@ section:not(:first-of-type) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px; }
+  @media (max-width: 1024px) {
+    .lawyers ul {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; } }
 
 .lawyers li {
   display: -webkit-box;
@@ -637,10 +702,15 @@ section:not(:first-of-type) {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 250px;
-  height: 350px;
+  padding-top: 25%;
   background: url("../img/lawyer-def.png") no-repeat;
   background-size: 100%;
-  background-position: 50% 50%; }
+  background-position: 50% 40%; }
+  @media (max-width: 1024px) {
+    .lawyers li {
+      background-size: 80%;
+      width: 48%;
+      padding-top: 35%; } }
   .lawyers li:hover p {
     background: #4682B4; }
   .lawyers li p {

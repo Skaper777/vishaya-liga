@@ -3,15 +3,27 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+
+    @media(max-width: $desktop) {
+      flex-wrap: wrap;
+    }
   }
 
   li {
     padding: 10px;
 
+    @media(max-width: $desktop) {
+      flex-basis: 45%;
+    }
+
     svg {
       fill: $dark;
       width: 80px;
       height: auto;
+
+      @media(max-width: $desktop) {
+        width: 60px;
+      }
     }
 
     h3 {

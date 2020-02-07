@@ -3,9 +3,19 @@
   padding: 15px 0;
   border-top: 4px solid $blue;
 
+  &__logo {
+    @media(max-width: $desktop) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: $desktop) {
+      flex-wrap: wrap;
+    }
   }
 
   &__adress {
@@ -23,5 +33,9 @@
     text-decoration: underline;
     color: white;
     font-size: 20px;
+
+    @media(max-width: $desktop) {
+      margin-bottom: 10px;
+    }
   }
 }

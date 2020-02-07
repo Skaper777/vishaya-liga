@@ -5,7 +5,11 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+
+    @media(max-width: $desktop) {
+      flex-wrap: wrap;
+    }
   }
 
   &__nav {

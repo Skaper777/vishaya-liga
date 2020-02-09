@@ -8,6 +8,12 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
     }
+
+    @media(max-width: 500px) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
   }
 
   li {
@@ -24,6 +30,11 @@
       background-size: 80%;
       width: 48%;
       padding-top: 35%;
+    }
+
+    @media(max-width: 500px) {
+      box-sizing: border-box;
+      padding-top: 70%;
     }
 
     &:hover {
@@ -53,5 +64,18 @@
   &__text {
     text-align: center;
     color: #6a6a6a;
+
+    @media(max-width: 500px) {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media(max-width: 500px) {
+      display: flex;
+    }
   }
 }

@@ -7,6 +7,10 @@
     @media(max-width: $desktop) {
       flex-wrap: wrap;
     }
+
+    @media(max-width: 500px) {
+      flex-direction: column;
+    }
   }
 
   li {
@@ -14,6 +18,10 @@
 
     @media(max-width: $desktop) {
       flex-basis: 45%;
+    }
+
+    @media(max-width: 500px) {
+      flex-basis: 100%;
     }
 
     svg {
@@ -35,6 +43,10 @@
     p {
       color: $text-color;
       line-height: 22px;
+
+      @media(max-width: 500px) {
+        font-size: 14px;
+      }
     }
   }
 }

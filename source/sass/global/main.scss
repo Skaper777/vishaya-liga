@@ -29,6 +29,12 @@ h2 {
     padding: 30px;
   }
 
+  @media(max-width: 500px) {
+    font-size: 20px;
+    width: auto;
+    padding: 20px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -40,6 +46,10 @@ h2 {
 
     @media(max-width: $desktop) {
       width: 40px;
+    }
+
+    @media(max-width: 500px) {
+      display: none;
     }
   }
 
@@ -67,4 +77,8 @@ a {
 
 section:not(:first-of-type) {
   padding-bottom: 40px;
+
+  @media(max-width: 500px) {
+    padding-bottom: 20px;
+  }
 }

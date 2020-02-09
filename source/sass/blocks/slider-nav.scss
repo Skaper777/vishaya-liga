@@ -1,0 +1,47 @@
+.slider-nav {
+  width: 100px;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  div {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &::after,
+    &:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 3px;
+      background: grey;
+    }
+  }
+
+  &__left {
+    &::before {
+      top: 25%;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      bottom: 25%;
+    }
+  }
+
+  &__right {
+    &::before {
+      right: 0;
+      top: 25%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(-45deg);
+      bottom: 25%;
+    }
+  }
+}

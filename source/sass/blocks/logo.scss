@@ -7,9 +7,17 @@
     font-size: 34px;
     margin-bottom: 6px;
     border-bottom: 2px solid $blue;
+
+    @media(max-width: 768px) {
+      font-size: 25px;
+    }
   }
 
   span {
     color: white;
+
+    @media(max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }

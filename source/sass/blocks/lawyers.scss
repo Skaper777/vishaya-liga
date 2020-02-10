@@ -51,6 +51,10 @@
       font-weight: bold;
       transition: 0.2s;
       border-bottom: 4px solid $blue;
+
+      @media(max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     span {
@@ -58,6 +62,10 @@
       text-transform: none;
       font-weight: normal;
       font-size: 14px;
+
+      @media(max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
 

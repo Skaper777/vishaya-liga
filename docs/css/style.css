@@ -689,7 +689,7 @@ section:not(:first-of-type) {
         top: 30%;
         z-index: 10;
         color: white;
-        font-size: 40px;
+        font-size: 45px;
         text-align: center;
         font-weight: bold;
         line-height: 60px;
@@ -737,6 +737,13 @@ section:not(:first-of-type) {
         .main-window__slider li p span {
           color: #4682B4; }
 
+.services h2 span {
+  border-bottom: 2px solid;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .services h2 span:hover {
+    color: #2B2A27; }
+
 .services ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,6 +784,11 @@ section:not(:first-of-type) {
     margin: 12px 0;
     text-transform: uppercase;
     font-size: 16px; }
+    .services li h3 a {
+      color: black;
+      text-decoration: underline; }
+      .services li h3 a:hover {
+        color: #4682B4; }
   .services li p {
     color: #6a6a6a;
     line-height: 22px; }
@@ -820,11 +832,15 @@ section:not(:first-of-type) {
       line-height: 24px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
-    .feedbacks .feedbacks-slider img {
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      margin-right: 10px; }
+      .feedbacks .feedbacks-slider li:first-of-type .feedbacks-slider__user-img {
+        background-image: url("../../img/ava-2.jpg"); }
+      .feedbacks .feedbacks-slider li:nth-of-type(2) .feedbacks-slider__user-img {
+        background-image: url("../../img/def-ava.jpg"); }
+      .feedbacks .feedbacks-slider li:nth-of-type(3) .feedbacks-slider__user-img {
+        background-image: url("../../img/ava-3.jpg");
+        background-position-y: 25%; }
+      .feedbacks .feedbacks-slider li:last-of-type .feedbacks-slider__user-img {
+        background-image: url("../../img/ava-4.jpg"); }
     .feedbacks .feedbacks-slider__text {
       margin-bottom: 20px; }
       @media (max-width: 500px) {
@@ -834,6 +850,14 @@ section:not(:first-of-type) {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+    .feedbacks .feedbacks-slider__user-img {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-y: 0; }
     .feedbacks .feedbacks-slider__user-name {
       color: #2B2A27;
       font-weight: bold;
@@ -911,11 +935,17 @@ section:not(:first-of-type) {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     border-bottom: 4px solid #4682B4; }
+    @media (max-width: 768px) {
+      .lawyers li p {
+        font-size: 14px; } }
   .lawyers li span {
     display: block;
     text-transform: none;
     font-weight: normal;
     font-size: 14px; }
+    @media (max-width: 768px) {
+      .lawyers li span {
+        font-size: 12px; } }
 
 .lawyers__text {
   text-align: center;

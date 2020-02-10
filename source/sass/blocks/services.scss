@@ -1,4 +1,15 @@
 .services {
+  h2 {
+    span {
+      border-bottom: 2px solid;
+      transition: 0.2s;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+
   ul {
     display: flex;
     justify-content: space-evenly;
@@ -38,6 +49,15 @@
       margin: 12px 0;
       text-transform: uppercase;
       font-size: 16px;
+
+      a {
+        color: black;
+        text-decoration: underline;
+
+        &:hover {
+          color: $blue;
+        }
+      }
     }
 
     p {

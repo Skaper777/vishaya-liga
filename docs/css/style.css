@@ -554,12 +554,12 @@ section:not(:first-of-type) {
           flex-direction: column; }
   .logo a {
     color: white;
-    font-size: 34px;
+    font-size: 40px;
     margin-bottom: 6px;
     border-bottom: 2px solid #4682B4; }
     @media (max-width: 768px) {
       .logo a {
-        font-size: 25px; } }
+        font-size: 35px; } }
   .logo span {
     color: white; }
     @media (max-width: 768px) {
@@ -586,19 +586,19 @@ section:not(:first-of-type) {
         -ms-flex-pack: start;
             justify-content: flex-start; } }
 
-.contacts-info__item:not(:last-of-type) {
+.contacts-info__item {
   position: relative;
   margin-bottom: 10px; }
   @media (max-width: 1024px) {
-    .contacts-info__item:not(:last-of-type) {
+    .contacts-info__item {
       margin-bottom: 0; } }
   @media (max-width: 768px) {
-    .contacts-info__item:not(:last-of-type) {
+    .contacts-info__item {
       font-size: 14px; } }
   @media (max-width: 500px) {
-    .contacts-info__item:not(:last-of-type) {
+    .contacts-info__item {
       margin-right: 10px; } }
-  .contacts-info__item:not(:last-of-type) svg {
+  .contacts-info__item svg {
     height: auto;
     width: 20px;
     position: absolute;
@@ -608,45 +608,24 @@ section:not(:first-of-type) {
     -webkit-transition: 0.2s;
     transition: 0.2s; }
     @media (max-width: 768px) {
-      .contacts-info__item:not(:last-of-type) svg {
+      .contacts-info__item svg {
         top: 0; } }
     @media (max-width: 500px) {
-      .contacts-info__item:not(:last-of-type) svg {
+      .contacts-info__item svg {
         top: -18px;
         width: 25px;
         cursor: pointer; } }
-  .contacts-info__item:not(:last-of-type) a {
+  .contacts-info__item a {
     position: relative;
     color: white;
     padding-left: 30px; }
     @media (max-width: 500px) {
-      .contacts-info__item:not(:last-of-type) a {
+      .contacts-info__item a {
         font-size: 0; } }
-    .contacts-info__item:not(:last-of-type) a:hover {
+    .contacts-info__item a:hover {
       text-decoration: underline; }
-      .contacts-info__item:not(:last-of-type) a:hover svg {
+      .contacts-info__item a:hover svg {
         fill: white; }
-
-@media (max-width: 500px) {
-  .contacts-info__soc {
-    margin-left: 20px; } }
-
-.contacts-info__soc ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.contacts-info__soc li:not(:last-of-type) {
-  margin-right: 20px; }
-
-.contacts-info__soc svg {
-  width: 30px;
-  height: auto;
-  fill: white;
-  -webkit-transition: .2s;
-  transition: .2s; }
-  .contacts-info__soc svg:hover {
-    fill: #4682B4; }
 
 @media (max-width: 1024px) {
   .contacts-info h4 {
@@ -911,12 +890,24 @@ section:not(:first-of-type) {
           justify-content: flex-end;
   width: 250px;
   padding-top: 25%;
-  background: url("../img/lawyer-def.png") no-repeat;
-  background-size: 100%;
-  background-position: 50% 40%; }
+  background: url("../img/4.jpg") no-repeat;
+  background-size: 95%;
+  background-position: 50% 30%; }
+  .lawyers li:first-of-type {
+    background: url("../img/1.jpg") no-repeat;
+    background-size: 95%;
+    background-position: 50% 30%; }
+  .lawyers li:nth-of-type(2) {
+    background: url("../img/3.jpg") no-repeat;
+    background-size: 95%;
+    background-position: 50% 30%; }
+  .lawyers li:nth-of-type(3) {
+    background: url("../img/2.jpg") no-repeat;
+    background-size: 95%;
+    background-position: 50% 30%; }
   @media (max-width: 1024px) {
     .lawyers li {
-      background-size: 80%;
+      background-size: 60%;
       width: 48%;
       padding-top: 35%; } }
   @media (max-width: 500px) {
@@ -998,6 +989,14 @@ section:not(:first-of-type) {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     bottom: 25%; }
+
+.about {
+  padding-bottom: 30px; }
+  .about__text {
+    color: #6a6a6a;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 30px; }
 
 /**
  * Swiper 4.4.6

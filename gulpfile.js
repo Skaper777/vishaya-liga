@@ -7,19 +7,15 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var flexbugs = require("postcss-flexbugs-fixes");
 var server = require("browser-sync").create();
-var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
-var webp = require("gulp-webp");
 var minifycss = require("gulp-csso");
-var minjs = require("gulp-uglify");
 var minhtml = require("gulp-htmlmin");
 var imagemin = require("gulp-imagemin");
-var posthtml = require("gulp-posthtml");
-var run = require("run-sequence");
 var del = require("del");
-var pump = require('pump');
+var concat = require('gulp-concat');
+var minify = require('gulp-minify');
 
-gulp.task("style", function() {
+gulp.task("style", function(done) {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -32,16 +28,8 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("docs/css"))
     .pipe(server.stream());
-});
 
-gulp.task("minjs", function (cd) {
-  pump([
-      gulp.src("docs/js/*.js"),
-      minjs(),
-      gulp.dest("docs/js")
-    ],
-    cd
-  );
+  done()
 });
 
 gulp.task("minhtml", function() {
@@ -59,9 +47,9 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js", ["jsChange"]).on("change", server.reload);
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("style"));
+  gulp.watch("source/*.html",  gulp.series("html")).on("change", server.reload);
+  gulp.watch("source/js/modules/*.js", gulp.series("js")).on("change", server.reload);
 });
 
 gulp.task("images", function () {
@@ -73,26 +61,21 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("sprite", function () {
-  return gulp.src("source/img/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
-});
-
-gulp.task("webp", function () {
-  return gulp.src("source/img/content/**/*.{png,jpg}")
-    .pipe(webp({quality: 40}))
-    .pipe(gulp.dest("source/img/content"));
+gulp.task('js', function(done){ // Создаем таск Sass
+  gulp.src([
+    'source/js/swiper.min.js',
+    'source/js/*.js'
+  ]) // Берем источник
+      .pipe(concat('app.js'))
+      .pipe(minify())
+      .pipe(gulp.dest('docs/js/')) // Выгружаем результата в папку app/js
+      done()
 });
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
+    "source/fonts/**",
     "source/img/**",
-    "source/js/**",
     "source/videos/**",
     "source/**/*.html"
   ], {
@@ -107,34 +90,13 @@ gulp.task("clean", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  // .pipe(posthtml)
     .pipe(gulp.dest("docs"));
 });
 
-gulp.task("copyjs", function () {
-  return gulp.src([
-    "source/js/**"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("docs"));
-});
-
-gulp.task("jsChange", function (done) {
-  run(
-    "copyjs",
-    // "minjs",
-    done
-  );
-});
-
-gulp.task("build", function (done) {
-  run(
+gulp.task("build", gulp.series(
     "clean",
     "copy",
-    // "minhtml",
-    "style",
-    "jsChange",
-    done
-  );
-});
+    "js",
+    "style"
+  )
+);
